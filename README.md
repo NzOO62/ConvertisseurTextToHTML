@@ -1,5 +1,3 @@
-Markdown
-
 # ADOCX to HTML 📄✨
 
 **Transformez vos documents Word (`.docx`) en pages HTML propres et stylisées, en une seule ligne de commande.**
@@ -30,19 +28,24 @@ Avant de commencer, assurez-vous d'avoir installé :
 ## 🛠️ Installation
 
 1.  **Clonez ou téléchargez ce projet :**
+
     ```bash
     git clone [https://github.com/votre-nom-utilisateur/votre-projet.git](https://github.com/votre-nom-utilisateur/votre-projet.git)
     cd votre-projet
     ```
 
 2.  **Installez la dépendance nécessaire :**
+
     Le projet utilise la bibliothèque `mammoth`. Installez-la avec `pip`.
+
     ```bash
     pip install mammoth
     ```
 
 3.  **Vérifiez la structure des fichiers :**
+
     Assurez-vous que la structure de votre projet ressemble à ceci :
+
     ```
     .
     ├── convertisseur.py      # Le script principal
@@ -97,3 +100,4 @@ Bash
 python convertisseur.py mon_doc.docx ma_page_perso.html mon_theme
 🤝 Contribuer
 Les contributions sont les bienvenues ! Si vous avez des idées d'amélioration, des corrections de bugs ou de nouveaux thèmes à proposer, n'hésitez pas à ouvrir une issue ou une pull request.
+
