@@ -1,54 +1,65 @@
-ADOCX to HTML 📄✨
-Transformez vos documents Word (.docx) en pages HTML propres et stylisées, en une seule ligne de commande.
+Markdown
 
-Vous avez un document Word et vous rêvez de le publier sur le web sans vous battre avec du code HTML horrible généré par Word ? Cet outil est fait pour vous ! Il convertit vos fichiers .docx en un HTML sémantique et propre, et vous permet même d'appliquer de magnifiques thèmes CSS (Clair, Sombre, Professionnel, et plus encore) à la volée.
+# ADOCX to HTML 📄✨
 
-🚀 Fonctionnalités
-Conversion Sémantique : Fini le code pollué ! Les titres deviennent des <h1>, <h2>, les listes des <ul>, les tableaux des <table>, etc.
+**Transformez vos documents Word (`.docx`) en pages HTML propres et stylisées, en une seule ligne de commande.**
 
-Thèmes CSS : Appliquez un style à votre page HTML instantanément. Passez d'un look light à dark en un clin d'œil.
+Vous avez un document Word et vous rêvez de le publier sur le web sans vous battre avec du code HTML horrible généré par Word ? Cet outil est fait pour vous ! Il convertit vos fichiers `.docx` en un HTML sémantique et propre, et vous permet même d'appliquer de magnifiques thèmes CSS (Clair, Sombre, Professionnel, et plus encore) à la volée.
 
-Extrêmement Simple : Aucune interface compliquée. Tout se passe dans votre terminal.
+---
 
-Gestion des Images : Les images de votre document sont automatiquement intégrées dans la page HTML.
+## 🚀 Fonctionnalités
 
-Extensible : Créez facilement vos propres thèmes CSS pour correspondre à votre identité visuelle.
+* **Conversion Sémantique** : Fini le code pollué ! Les titres deviennent des `<h1>`, `<h2>`, les listes des `<ul>`, les tableaux des `<table>`, etc.
+* **Thèmes CSS** : Appliquez un style à votre page HTML instantanément. Passez d'un look `light` à `dark` en un clin d'œil.
+* **Extrêmement Simple** : Aucune interface compliquée. Tout se passe dans votre terminal.
+* **Gestion des Images** : Les images de votre document sont automatiquement intégrées dans la page HTML.
+* **Extensible** : Créez facilement vos propres thèmes CSS pour correspondre à votre identité visuelle.
 
-✅ Prérequis
+---
+
+## ✅ Prérequis
+
 Avant de commencer, assurez-vous d'avoir installé :
 
-Python 3.6+
+* [Python 3.6+](https://www.python.org/downloads/)
+* `pip` (généralement inclus avec Python)
 
-pip (généralement inclus avec Python)
+---
 
-🛠️ Installation
-Clonez ou téléchargez ce projet :
+## 🛠️ Installation
 
-Bash
+1.  **Clonez ou téléchargez ce projet :**
+    ```bash
+    git clone [https://github.com/votre-nom-utilisateur/votre-projet.git](https://github.com/votre-nom-utilisateur/votre-projet.git)
+    cd votre-projet
+    ```
 
-git clone https://github.com/votre-nom-utilisateur/votre-projet.git
-cd votre-projet
-Installez la dépendance nécessaire :
-Le projet utilise la bibliothèque mammoth. Installez-la avec pip.
+2.  **Installez la dépendance nécessaire :**
+    Le projet utilise la bibliothèque `mammoth`. Installez-la avec `pip`.
+    ```bash
+    pip install mammoth
+    ```
 
-Bash
+3.  **Vérifiez la structure des fichiers :**
+    Assurez-vous que la structure de votre projet ressemble à ceci :
+    ```
+    .
+    ├── convertisseur.py      # Le script principal
+    ├── README.md             # Ce fichier
+    └── styles/
+        ├── light.css
+        ├── dark.css
+        └── professional.css
+    ```
 
-pip install mammoth
-Vérifiez la structure des fichiers :
-Assurez-vous que la structure de votre projet ressemble à ceci :
+---
 
-.
-├── convertisseur.py      # Le script principal
-├── README.md             # Ce fichier
-└── styles/
-    ├── light.css
-    ├── dark.css
-    └── professional.css
-🎨 Comment l'utiliser
+## 🎨 Comment l'utiliser
+
 L'utilisation se fait via la ligne de commande. La syntaxe est simple :
 
-Bash
-
+```bash
 python convertisseur.py <fichier_entree.docx> <fichier_sortie.html> [theme_optionnel]
 Exemples :
 1. Conversion simple (sans style)
