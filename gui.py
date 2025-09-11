@@ -129,7 +129,7 @@ class App(ctk.CTk):
         ctk.set_appearance_mode(new_mode)
 
 if __name__ == "__main__":
-    ctk.set_appearance_mode("Dark")
+    ctk.set_appearance_mode("Light")
     ctk.set_default_color_theme("blue")
     
     app = App()
