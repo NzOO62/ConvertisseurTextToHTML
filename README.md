@@ -1,103 +1,81 @@
-# ADOCX to HTML 📄✨
+# ADOCX to HTML ✨ (Version Pro)
 
-**Transformez vos documents Word (`.docx`) en pages HTML propres et stylisées, en une seule ligne de commande.**
+**Un convertisseur de documents universel avec une interface graphique moderne et un aperçu en direct.**
 
-Vous avez un document Word et vous rêvez de le publier sur le web sans vous battre avec du code HTML horrible généré par Word ? Cet outil est fait pour vous ! Il convertit vos fichiers `.docx` en un HTML sémantique et propre, et vous permet même d'appliquer de magnifiques thèmes CSS (Clair, Sombre, Professionnel, et plus encore) à la volée.
+Transformez vos fichiers **.docx, .md, .odt et même .html** en pages web propres et stylisées. Visualisez vos modifications en temps réel grâce à l'aperçu intégré et exportez un fichier HTML parfait en un seul clic.
+
+
 
 ---
 
-## 🚀 Fonctionnalités
+## 🚀 Fonctionnalités Clés
 
-* **Conversion Sémantique** : Fini le code pollué ! Les titres deviennent des `<h1>`, `<h2>`, les listes des `<ul>`, les tableaux des `<table>`, etc.
-* **Thèmes CSS** : Appliquez un style à votre page HTML instantanément. Passez d'un look `light` à `dark` en un clin d'œil.
-* **Extrêmement Simple** : Aucune interface compliquée. Tout se passe dans votre terminal.
-* **Gestion des Images** : Les images de votre document sont automatiquement intégrées dans la page HTML.
-* **Extensible** : Créez facilement vos propres thèmes CSS pour correspondre à votre identité visuelle.
+* **Multi-Format** : Convertissez depuis les formats les plus populaires :
+    * Microsoft Word (`.docx`)
+    * Markdown (`.md`)
+    * OpenDocument Text (`.odt`)
+    * Permet même de restyler un fichier `HTML` existant.
+* **Aperçu en Direct** : Plus besoin de deviner ! Chaque changement de fichier ou de thème est immédiatement visible dans le panneau d'aperçu.
+* **Thèmes CSS Personnalisables** : Appliquez instantanément un style à vos documents grâce aux thèmes CSS fournis. Ajoutez facilement les vôtres !
+* **Interface Moderne** : Une interface utilisateur élégante avec un thème clair et sombre.
+* **Autonome** : Le CSS est directement intégré dans le fichier HTML final, le rendant 100% portable.
 
 ---
 
 ## ✅ Prérequis
 
-Avant de commencer, assurez-vous d'avoir installé :
-
-* [Python 3.6+](https://www.python.org/downloads/)
-* `pip` (généralement inclus avec Python)
+1.  **Python 3.8+**
+2.  **Pandoc** : Pour la conversion des fichiers `.odt`, Pandoc doit être installé sur votre système.
+    * [➡️ **Téléchargez et installez Pandoc ici**](https://pandoc.org/installing.html)
 
 ---
 
 ## 🛠️ Installation
 
-1.  **Clonez ou téléchargez ce projet :**
+Ce projet utilise un environnement virtuel pour une gestion propre des dépendances.
 
+1.  **Clonez ou téléchargez ce projet.**
+
+2.  **Ouvrez un terminal** dans le dossier du projet.
+
+3.  **Créez l'environnement virtuel :**
     ```bash
-    git clone [https://github.com/votre-nom-utilisateur/votre-projet.git](https://github.com/votre-nom-utilisateur/votre-projet.git)
-    cd votre-projet
+    python -m venv venv
     ```
 
-2.  **Installez la dépendance nécessaire :**
+4.  **Activez l'environnement :**
+    * Sur Windows (PowerShell) : `.\venv\Scripts\Activate.ps1`
+    * Sur macOS/Linux : `source venv/bin/activate`
 
-    Le projet utilise la bibliothèque `mammoth`. Installez-la avec `pip`.
-
+5.  **Installez les bibliothèques nécessaires :**
     ```bash
-    pip install mammoth
-    ```
-
-3.  **Vérifiez la structure des fichiers :**
-
-    Assurez-vous que la structure de votre projet ressemble à ceci :
-
-    ```
-    .
-    ├── convertisseur.py      # Le script principal
-    ├── README.md             # Ce fichier
-    └── styles/
-        ├── light.css
-        ├── dark.css
-        └── professional.css
+    pip install customtkinter mammoth pypandoc markdown beautifulsoup4 tkinterweb
     ```
 
 ---
 
-## 🎨 Comment l'utiliser
+## 🎨 Utilisation
 
-L'utilisation se fait via la ligne de commande. La syntaxe est simple :
+Une fois l'installation terminée, lancez simplement l'application.
 
-```bash
-python convertisseur.py <fichier_entree.docx> <fichier_sortie.html> [theme_optionnel]
-Exemples :
-1. Conversion simple (sans style)
+1.  **Assurez-vous que votre environnement est activé** (vous devez voir `(venv)` au début de votre terminal).
 
-Bash
+2.  **Exécutez le script :**
+    ```bash
+    python gui.py
+    ```
+3.  **Utilisez l'interface :**
+    * **Cliquez sur "Parcourir..."** pour sélectionner votre fichier d'entrée.
+    * **L'aperçu se met à jour** automatiquement.
+    * **Changez le thème CSS** dans le menu déroulant pour voir le style changer en direct.
+    * **Cliquez sur "Enregistrer sous..."** pour choisir où sauvegarder votre fichier.
+    * Enfin, cliquez sur **"Convertir et Sauvegarder"**.
 
-python convertisseur.py mon_rapport.docx page_web.html
-Le fichier page_web.html sera créé avec un style de navigateur par défaut.
+---
 
-2. Conversion avec le thème sombre
+## ✨ Personnalisation
 
-Bash
-
-python convertisseur.py rapport_science.docx article_sombre.html dark
-La page article_sombre.html sera générée avec le style dark.css.
-
-3. Conversion avec le thème professionnel
-
-Bash
-
-python convertisseur.py CV.docx mon_cv_en_ligne.html professional
-Votre CV est maintenant une page web propre avec une touche professionnelle !
-
-✨ Créez vos propres thèmes
-Vous voulez un thème à vos couleurs ? C'est très simple !
-
-Créez un nouveau fichier CSS dans le dossier styles/, par exemple mon_theme.css.
-
-Ajoutez-y vos règles de style.
-
-Utilisez-le en appelant le script avec le nom de votre fichier (sans l'extension) :
-
-Bash
-
-python convertisseur.py mon_doc.docx ma_page_perso.html mon_theme
-🤝 Contribuer
-Les contributions sont les bienvenues ! Si vous avez des idées d'amélioration, des corrections de bugs ou de nouveaux thèmes à proposer, n'hésitez pas à ouvrir une issue ou une pull request.
-
+Pour ajouter vos propres thèmes, c'est très simple :
+1.  Créez un nouveau fichier `.css` (ex: `mon_style.css`).
+2.  Placez-le dans le dossier `styles/`.
+3.  Relancez l'application : votre thème apparaîtra automatiquement dans le menu déroulant !
