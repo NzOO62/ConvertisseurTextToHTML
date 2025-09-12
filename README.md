@@ -1,4 +1,4 @@
-# ADOCX to HTML ✨ (Version Pro)
+# Arrera HTML Generator ✨
 
 **Un convertisseur de documents universel avec une interface graphique moderne et un aperçu en direct.**
 
@@ -78,4 +78,5 @@ Une fois l'installation terminée, lancez simplement l'application.
 Pour ajouter vos propres thèmes, c'est très simple :
 1.  Créez un nouveau fichier `.css` (ex: `mon_style.css`).
 2.  Placez-le dans le dossier `styles/`.
+
 3.  Relancez l'application : votre thème apparaîtra automatiquement dans le menu déroulant !
