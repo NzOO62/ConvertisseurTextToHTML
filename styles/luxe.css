@@ -1,0 +1,131 @@
+/*
+ * Thème : "Prestige Or"
+ * Description : Un style luxueux, minimaliste et éditorial.
+ * Palette :
+ * Fond : #2d2d2d (Gris Nuit)
+ * Accent : #ffd369 (Or)
+ * Texte : #f5f5f5 (Blanc Coton)
+ */
+
+body {
+    background-color: #2d2d2d;
+    color: #f5f5f5;
+
+    /* --- Typographie "Éditoriale" --- */
+    /* Une police "serif" (avec empattements) pour le corps du texte
+       donne un aspect "livre" ou "magazine de luxe". */
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-size: 18px; /* Police de base plus grande pour une lecture confortable */
+    line-height: 1.8;
+    text-align: justify; /* Texte justifié pour un look "bloc" propre */
+
+    /* --- Espacement "Luxe" --- */
+    /* Le luxe, c'est l'espace. On élargit le conteneur et les marges. */
+    max-width: 900px;
+    margin: 80px auto; /* Plus de marge en haut/en bas */
+    padding: 0 50px; /* Plus de marge intérieure */
+}
+
+/* --- Titres : Contraste Moderne --- */
+h1, h2, h3, h4, h5, h6 {
+    /* On utilise une police "sans-serif" pour contraster avec le corps */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #ffd369;
+    
+    /* Le style "prestige" : léger, majuscule, et espacé */
+    font-weight: 300; /* Très fin et élégant */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+    /* On supprime la bordure ! On la remplace par de l'espace */
+    border: none;
+    padding-bottom: 0;
+    margin-top: 3em;
+    margin-bottom: 1.5em;
+}
+
+h1 {
+    /* Le titre principal est plus gras et centré */
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 2em;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 600; /* H3 un peu plus marqué */
+}
+
+/* --- Liens --- */
+a {
+    color: #ffd369;
+    text-decoration: none; /* Pas de soulignement */
+    transition: opacity 0.3s ease;
+}
+a:hover {
+    opacity: 0.7; /* Un simple fondu au survol */
+}
+
+/* --- Tableaux : Style "Éditorial" --- */
+/* C'est le plus grand changement.
+   On supprime toutes les bordures verticales pour un look épuré. */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 40px 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Police sans-serif pour les données */
+    font-size: 0.9em;
+}
+
+th, td {
+    border: none; /* Aucune bordure verticale */
+    border-bottom: 1px solid #555; /* Juste une ligne de séparation horizontale subtile */
+    padding: 20px; /* Beaucoup de padding */
+    text-align: left;
+}
+
+/* En-tête du tableau */
+th {
+    color: #ffd369;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    
+    /* On encadre l'en-tête en or */
+    border-top: 2px solid #ffd369;
+    border-bottom: 2px solid #ffd369;
+}
+
+/* On enlève la dernière ligne de bordure du tableau */
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* --- Éléments Bonus --- */
+
+/* Ligne de séparation */
+hr {
+    border: 0;
+    height: 1px;
+    background: #ffd369;
+    opacity: 0.3;
+    margin: 4em auto;
+    width: 50%;
+}
+
+/* Citations */
+blockquote {
+    margin: 30px 0 30px 40px;
+    padding: 0;
+    border: none;
+    font-style: italic;
+    font-size: 1.3em;
+    color: #ffd369;
+    opacity: 0.9;
+}
