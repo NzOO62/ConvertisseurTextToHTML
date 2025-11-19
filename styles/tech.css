@@ -1,0 +1,201 @@
+/* * Thème : "NEXUS PRO"
+ * Usage : Rapports techniques, Documentation IT, Offres commerciales modernes.
+ * Vibe : SpaceX, Interface SaaS, Clean Tech, Laboratoire.
+ */
+
+/* * POLICES :
+ * 'Titillium Web' : Une police très technologique mais très lisible (utilisée dans l'aérospatiale).
+ * 'Roboto' : Le standard pour le corps de texte, neutre et pro.
+ * 'Fira Code' : Pour les données et le code.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&family=Roboto:wght@300;400;500&family=Fira+Code&display=swap');
+
+body {
+    /* Fond : Un gris très pâle, "Gris Laboratoire" */
+    background-color: #f4f6f8;
+    color: #2c3e50; /* Gris foncé bleuté (plus doux que le noir) */
+    
+    /* Une grille millimétrée très subtile en fond pour le côté "Ingénieur" */
+    background-image: 
+        linear-gradient(#e1e8ed 1px, transparent 1px),
+        linear-gradient(90deg, #e1e8ed 1px, transparent 1px);
+    background-size: 40px 40px;
+    
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    
+    /* Simulation d'une page A4 moderne "Flottante" */
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 60px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Ombre douce et diffuse */
+    border-top: 5px solid #0984e3; /* La "Barre de marque" en haut */
+}
+
+/* --- TITRES : L'INGÉNIERIE --- */
+h1, h2, h3 {
+    font-family: 'Titillium Web', sans-serif;
+    color: #2d3436;
+    margin-top: 2em;
+}
+
+h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #0984e3; /* Bleu Tech (Electron Blue) */
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dfe6e9;
+    
+    /* Petit détail tech : un carré à gauche */
+    display: flex;
+    align-items: center;
+}
+h1::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #0984e3;
+    margin-right: 15px;
+    box-shadow: 4px 4px 0px #74b9ff; /* Ombre décalée */
+}
+
+h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    border-left: 4px solid #0984e3; /* Marqueur vertical */
+    padding-left: 15px;
+    background: linear-gradient(90deg, #f0f9ff 0%, transparent 100%); /* Dégradé subtil vers la droite */
+}
+
+h3 {
+    font-size: 1.4em;
+    color: #636e72;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* --- TEXTE --- */
+p {
+    text-align: justify;
+    color: #4a5568;
+    margin-bottom: 1.5em;
+}
+
+/* --- LIENS (INTERACTIFS) --- */
+a {
+    color: #0984e3;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+a:hover {
+    border-bottom: 1px solid #0984e3;
+    background-color: #f0f9ff; /* Surlignage très léger au survol */
+}
+
+/* --- TABLEAUX (DASHBOARD STYLE) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    font-size: 0.95em;
+    border-radius: 6px;
+    overflow: hidden; /* Pour arrondir les coins */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+th {
+    background-color: #2d3436; /* En-tête sombre */
+    color: #fff;
+    padding: 15px;
+    text-align: left;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ecf0f1;
+    color: #2c3e50;
+}
+
+/* Zébrure propre et pro */
+tr:nth-child(even) {
+    background-color: #f9fbfd;
+}
+
+/* Mise en valeur des chiffres (si présents dans le tableau) */
+td {
+    font-feature-settings: "tnum"; /* Alignement tabulaire des chiffres */
+}
+
+/* --- BLOCS D'INFORMATION (CALLOUTS) --- */
+blockquote {
+    background-color: #eef2f7; /* Bleu-Gris très pâle */
+    border-left: 4px solid #6c5ce7; /* Violet Tech pour contraster un peu */
+    margin: 30px 0;
+    padding: 20px;
+    font-style: italic;
+    color: #4a5568;
+    border-radius: 0 4px 4px 0;
+    position: relative;
+}
+/* Petite icône "Info" simulée */
+blockquote::before {
+    content: "ℹ";
+    position: absolute;
+    top: -10px;
+    left: -12px;
+    background: #6c5ce7;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* --- CODE / DONNÉES --- */
+pre {
+    background-color: #2d3436;
+    color: #a4b0be;
+    padding: 20px;
+    border-radius: 6px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+    border: 1px solid #dfe6e9;
+}
+code {
+    font-family: 'Fira Code', monospace;
+    background-color: #f1f2f6;
+    color: #c0392b; /* Rouge doux pour les termes techniques inline */
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* --- PIED DE PAGE DU DOCUMENT (Signature) --- */
+body::after {
+    content: ":: GENERATED BY ARRERA HTML SYSTEM :: CONFIDENTIAL ::";
+    display: block;
+    margin-top: 80px;
+    border-top: 1px solid #dfe6e9;
+    padding-top: 10px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 0.7em;
+    color: #b2bec3;
+    text-align: right;
+    letter-spacing: 2px;
+}

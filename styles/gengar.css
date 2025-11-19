@@ -1,0 +1,214 @@
+/* * Thème : "SHADOW BALL" (Inspiré d'Ectoplasma/Gengar)
+ * Vibe : Spectre, Poison, Lavender Town, Game Boy, Halloween
+ */
+
+/* * POLICES :
+ * 'Creepster' : Pour le côté horreur cartoon (Titre principal).
+ * 'Nosifer' : Pour le côté toxique/baveux (Sous-titres).
+ * 'VT323' : Une police Pixel Art pour rappeler les jeux Pokémon sur Game Boy.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&family=VT323&display=swap');
+
+body {
+    /* FOND : Un dégradé sombre simulant une aura fantomatique */
+    background-color: #1a0524; /* Violet très sombre */
+    background-image: radial-gradient(circle at 50% 30%, #3c1361 0%, #1a0524 70%, #000000 100%);
+    
+    color: #e0d0ff; /* Lavande pâle pour le texte */
+    font-family: 'VT323', monospace; /* Style Pixel Art */
+    font-size: 22px; /* Police pixel un peu plus grande pour la lisibilité */
+    margin: 0;
+    padding: 40px;
+    
+    /* Curseur personnalisé (optionnel, si supporté) : une croix ou main */
+    cursor: crosshair;
+}
+
+/* --- EFFET DE FUMÉE (Brouillard violet) --- */
+/* On ajoute une texture floue sur les côtés */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at bottom right, rgba(50, 205, 50, 0.1), transparent 40%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* --- LE TITRE (H1) : ECTOPLASMA --- */
+h1 {
+    font-family: 'Creepster', cursive;
+    font-size: 5.5em;
+    color: #9400d3; /* Violet Ectoplasma */
+    text-align: center;
+    margin-bottom: 50px;
+    line-height: 1;
+    
+    /* LE "REGARD" ROUGE : Double ombre portée rouge */
+    text-shadow: 
+        3px 3px 0px #2e003e, /* Ombre physique foncée */
+        0 0 15px #ff0000,    /* Lueur Yeux Rouges */
+        0 0 30px #ff0000;    /* Aura Rouge large */
+    
+    /* Forme arrondie et flottante */
+    transform: rotate(-2deg);
+    
+    /* Ligne de séparation "Sourire" */
+    border-bottom: 10px dotted #fff; /* Dents blanches */
+    padding-bottom: 20px;
+    border-radius: 0 0 50% 50%; /* Courbe du sourire */
+}
+
+/* --- SOUS-TITRES (H2) : TYPE POISON --- */
+h2 {
+    font-family: 'Nosifer', cursive; /* Police baveuse */
+    font-size: 2.5em;
+    color: #32cd32; /* Vert Poison (Sludge Bomb) */
+    text-transform: uppercase;
+    margin-top: 60px;
+    
+    /* Fond "Tache" sombre */
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px 30px;
+    
+    /* Bordure qui coule */
+    border-bottom: 5px solid #32cd32;
+    border-radius: 15px 15px 0 15px; /* Forme irrégulière */
+    
+    box-shadow: 0 5px 15px rgba(50, 205, 50, 0.3);
+}
+
+/* --- CONTENU TEXTE (POKÉDEX) --- */
+p {
+    background-color: rgba(46, 0, 62, 0.8); /* Fond boite de dialogue */
+    border: 2px solid #6a0dad; /* Bordure violette */
+    padding: 20px;
+    border-radius: 8px;
+    
+    /* Ombre intérieure pour effet écran rétro */
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+    
+    line-height: 1.4;
+    letter-spacing: 1px;
+    text-align: justify;
+}
+
+/* --- LIENS (HYPNOSE) --- */
+a {
+    color: #ff0000; /* Rouge yeux */
+    text-decoration: none;
+    border-bottom: 2px dashed #ff0000;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #fff;
+    background-color: #ff0000;
+    /* Effet de flash/hypnose */
+    box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000;
+    border-radius: 5px;
+    cursor: help;
+}
+
+/* --- TABLEAUX (INTERFACE DE COMBAT) --- */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 4px;
+    margin: 40px 0;
+    font-family: 'VT323', monospace;
+    font-size: 1.2em;
+    
+    /* Cadre style "Fenêtre de jeu" */
+    border: 4px solid #4b0082;
+    background-color: #000;
+    border-radius: 10px;
+}
+
+th {
+    background-color: #4b0082; /* Indigo */
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid #6a0dad;
+    letter-spacing: 2px;
+}
+
+td {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    padding: 10px;
+    color: #32cd32; /* Stats en vert poison */
+}
+
+/* Effet ligne active */
+tr:hover td {
+    background-color: #2e003e;
+    color: #fff;
+}
+
+/* --- CITATIONS (RUMEUR DE LAVANVILLE) --- */
+blockquote {
+    position: relative;
+    margin: 50px;
+    padding: 30px;
+    
+    font-family: 'Creepster', cursive;
+    font-size: 1.8em;
+    color: #fff;
+    text-align: center;
+    
+    /* Fond Fantôme */
+    background: linear-gradient(135deg, rgba(75, 0, 130, 0.5), rgba(0, 0, 0, 0.8));
+    
+    /* Forme fantomatique (arrondie) */
+    border-radius: 50% 50% 50% 0;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    
+    /* Animation de lévitation simulée par l'ombre */
+    box-shadow: 
+        10px 10px 0px rgba(0,0,0,0.5), /* Ombre dure */
+        0 0 20px #4b0082; /* Aura */
+}
+
+/* Petite queue de bulle de dialogue style fantôme */
+blockquote::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0 0 50% 50%;
+}
+
+/* --- CODE --- */
+pre {
+    background: #000;
+    border: 2px solid #32cd32; /* Bordure verte retro */
+    color: #32cd32; /* Texte terminal vert */
+    padding: 15px;
+    box-shadow: 0 0 10px #32cd32; /* Lueur radioactive */
+}
+
+/* Puces de liste : des petites Shadow Balls */
+ul li {
+    list-style: none;
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 10px;
+}
+ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background-color: #4b0082;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #9400d3;
+}
