@@ -7,7 +7,7 @@ import pypandoc
 import markdown
 from bs4 import BeautifulSoup
 import tkinterweb
-
+import webbrowser
 # --- MOTEURS DE CONVERSION ---
 
 def convert_docx_to_html(docx_path, style_name=None):
@@ -113,6 +113,10 @@ class App(ctk.CTk):
         self.html_preview = tkinterweb.HtmlFrame(preview_frame)
         self.html_preview.pack(expand=True, fill="both")
         self.html_preview.load_html("<h1>Aperçu en direct</h1><p>Sélectionnez un fichier .docx, .md, .odt ou .html pour commencer.</p>")
+        btn_frame = ctk.CTkFrame(preview_frame, height=40)
+        btn_frame.pack(fill="x", padx=5, pady=5)
+        ctk.CTkButton(btn_frame, text="🌍 Voir dans le Navigateur (Rendu Réel)", 
+            command=self.open_in_browser).pack(expand=True, fill="both")
 
     def update_preview(self):
         input_path = self.input_file_path.get()
@@ -190,6 +194,17 @@ class App(ctk.CTk):
         themes = [f.replace(".css", "") for f in os.listdir(styles_dir) if f.endswith(".css")]
         return ["Aucun thème"] + themes if themes else ["Aucun thème"]
     def change_appearance_mode(self): ctk.set_appearance_mode("Dark" if self.appearance_switch.get() else "Light")
+
+    def open_in_browser(self):
+        if not self.current_html_content:
+            return
+        # On crée un fichier temporaire pour l'aperçu
+        import tempfile
+        temp_file = os.path.join(tempfile.gettempdir(), "preview_arrera.html")
+        with open(temp_file, "w", encoding="utf-8") as f:
+            f.write(self.current_html_content)
+        # On l'ouvre avec le navigateur par défaut
+        webbrowser.open('file://' + temp_file)
 
 if __name__ == "__main__":
     ctk.set_appearance_mode("Dark")
