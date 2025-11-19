@@ -1,0 +1,147 @@
+/* * Thème : "Maggot Corps" (Inspiré de Slipknot)
+ * Vibe : Iowa, Nu-Metal, Industriel, Chaos, Code-barres
+ */
+
+/* * Importation de polices :
+ * 'Nosifer' : Pour l'aspect liquide/sanglant/baveux (Rappel le logo tribal)
+ * 'Special Elite' : Pour l'aspect machine à écrire sale (Rappel les livrets de paroles)
+ */
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&family=Special+Elite&display=swap');
+
+body {
+    background-color: #050505; /* Noir quasi absolu */
+    color: #dcdcdc; /* Gris sale pour le texte */
+    font-family: 'Special Elite', monospace; /* Police machine à écrire */
+    margin: 0;
+    padding: 0;
+    
+    /* Une texture de fond subtile style "bruit" pour salir le tout */
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 1px,
+        #111 1px,
+        #111 2px
+    );
+}
+
+/* --- LA BANDE CODE-BARRES (Signature Slipknot) --- */
+/* On crée une fausse bande code-barres tout en haut de la page */
+body::before {
+    content: "";
+    display: block;
+    height: 40px;
+    width: 100%;
+    background: repeating-linear-gradient(
+        90deg,
+        #000,
+        #000 2px,
+        #fff 2px,
+        #fff 4px,
+        #000 4px,
+        #000 8px,
+        #fff 8px,
+        #fff 9px
+    );
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+/* Conteneur principal */
+.content-wrapper { /* Si tu n'as pas de wrapper, applique au body avec margin */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-left: 10px solid #8a0303; /* Ligne rouge sang à gauche */
+}
+
+/* --- TITRES CHAOTIQUES --- */
+h1, h2, h3 {
+    font-family: 'Nosifer', cursive; /* La police "horreur" */
+    color: #ff0000; /* Rouge vif agressif */
+    text-transform: uppercase;
+    margin-top: 50px;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3.5em;
+    text-align: center;
+    /* Effet de "glitch" ou de vision double */
+    text-shadow: 
+        4px 4px 0px #333, 
+        -2px -2px 0px #8a0303;
+    transform: rotate(-2deg); /* Le titre est de travers */
+    border-bottom: 3px dashed #ff0000;
+    padding-bottom: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #fff;
+    background-color: #8a0303; /* Fond rouge sang */
+    padding: 10px;
+    display: inline-block; /* Le fond s'arrête au texte */
+    transform: skewX(-10deg); /* On penche le texte violemment */
+}
+
+/* --- TEXTE --- */
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    letter-spacing: 1px; /* Espacement type machine à écrire */
+}
+
+/* --- LIENS --- */
+a {
+    color: #ff0000;
+    text-decoration: line-through; /* On raye le lien (style nihiliste) */
+    font-weight: bold;
+}
+a:hover {
+    text-decoration: none;
+    background-color: #ff0000;
+    color: #000;
+}
+
+/* --- TABLEAUX INDUSTRIELS --- */
+table {
+    width: 100%;
+    margin: 40px 0;
+    border-collapse: collapse;
+    border: 4px solid #333;
+}
+
+th {
+    background-color: #111;
+    color: #ff0000;
+    font-family: 'Nosifer', cursive;
+    font-size: 1.2em;
+    padding: 20px;
+    border-bottom: 4px solid #ff0000;
+    text-align: left;
+}
+
+td {
+    background-color: #0a0a0a;
+    border: 1px solid #333;
+    padding: 15px;
+    color: #aaa;
+}
+
+/* Alternance pour un effet "grille de prison" */
+tr:nth-child(odd) td {
+    background-color: #151515;
+}
+
+/* --- CITATIONS (Style "Manifesto") --- */
+blockquote {
+    border: 2px solid #fff;
+    padding: 30px;
+    margin: 40px 0;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    font-style: italic;
+    box-shadow: 10px 10px 0 #8a0303; /* Ombre dure rouge */
+}
