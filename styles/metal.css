@@ -1,0 +1,131 @@
+/* * Thème : "Heavy Industrial"
+ * Vibe : Brutalisme, Metal, Concert, Flyer
+ * Importation d'une police "Metal" depuis Google Fonts 
+ */
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&family=Roboto+Mono:wght@400;700&display=swap');
+
+body {
+    /* Fond très sombre, presque noir */
+    background-color: #1a1a1a; 
+    /* Texte en police "code/machine" pour un effet brut */
+    font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
+    color: #e0e0e0;
+    
+    /* On centre tout comme une affiche de concert */
+    max-width: 900px;
+    margin: 50px auto;
+    
+    /* Le conteneur principal ressemble à une caisse de matériel (Flight case) */
+    background-color: #2d2d2d;
+    border: 4px solid #ffd369; /* Bordure épaisse OR */
+    padding: 40px;
+    
+    /* Ombre DURE (0px de flou) pour un effet graphique agressif */
+    box-shadow: 15px 15px 0px #000000;
+}
+
+/* --- TITRES --- */
+h1, h2, h3 {
+    /* Police style "groupe de metal" */
+    font-family: 'New Rocker', cursive;
+    color: #ffd369;
+    text-transform: uppercase; /* TOUT EN MAJUSCULES */
+    letter-spacing: 2px;
+    margin-top: 40px;
+    
+    /* Ombre portée sur le texte pour le détacher du fond */
+    text-shadow: 3px 3px 0px #000;
+}
+
+h1 {
+    font-size: 3.5em;
+    border-bottom: 5px solid #ffd369; /* Soulignement très épais */
+    text-align: center;
+    transform: rotate(-1deg); /* Légère rotation pour le chaos */
+}
+
+h2 {
+    font-size: 2.2em;
+    /* Bordure en pointillés pour un effet industriel */
+    border-left: 10px solid #ffd369; 
+    padding-left: 15px;
+}
+
+/* --- TEXTE & LIENS --- */
+p {
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+a {
+    color: #1a1a1a;
+    background-color: #ffd369; /* Surlignage style "marqueur" */
+    padding: 2px 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+a:hover {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 3px 3px 0px #ffd369;
+}
+
+/* --- TABLEAUX "TECHNIQUE" --- */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 30px 0;
+    border: 2px solid #555;
+}
+
+th {
+    background-color: #000; /* En-tête noire */
+    color: #ffd369;
+    font-family: 'New Rocker', cursive;
+    font-size: 1.2em;
+    padding: 15px;
+    border-bottom: 2px solid #ffd369;
+    text-align: center;
+}
+
+td {
+    background-color: #333;
+    padding: 12px;
+    border-bottom: 1px solid #444;
+    border-right: 1px solid #444;
+}
+
+/* Effet de survol sur les lignes du tableau */
+tr:hover td {
+    background-color: #ffd369;
+    color: #000;
+    font-weight: bold;
+}
+
+/* --- BLOCS --- */
+blockquote {
+    background: repeating-linear-gradient(
+        45deg,
+        #2d2d2d,
+        #2d2d2d 10px,
+        #333 10px,
+        #333 20px
+    ); /* Fond rayé style "Zone de danger" */
+    border: 2px solid #ffd369;
+    margin: 20px 0;
+    padding: 20px;
+    color: #fff;
+    font-style: italic;
+    border-left: 10px solid #ffd369;
+}
+
+/* Code blocs */
+pre {
+    background-color: #000;
+    border: 1px solid #ffd369;
+    padding: 15px;
+    overflow-x: auto;
+}
