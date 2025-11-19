@@ -4,8 +4,6 @@
 
 Transformez vos fichiers **.docx, .md, .odt et même .html** en pages web propres et stylisées. Visualisez vos modifications en temps réel grâce à l'aperçu intégré et exportez un fichier HTML parfait en un seul clic.
 
-
-
 ---
 
 ## 🚀 Fonctionnalités Clés
@@ -71,6 +69,10 @@ Une fois l'installation terminée, lancez simplement l'application.
     * **Cliquez sur "Enregistrer sous..."** pour choisir où sauvegarder votre fichier.
     * Enfin, cliquez sur **"Convertir et Sauvegarder"**.
 
+> ⚠️ **Note importante sur l'aperçu :**
+> Le panneau de visualisation intégré est optimisé pour être rapide et léger. Il se peut qu'il n'affiche pas **tous les détails graphiques avancés** (comme certaines polices Google Fonts, les dégradés complexes ou les effets spéciaux).
+> **Pas d'inquiétude :** Le fichier HTML final exporté contiendra bien tous ces éléments et s'affichera parfaitement dans votre navigateur habituel (Chrome, Firefox, Edge, etc.).
+
 ---
 
 ## ✨ Personnalisation
@@ -78,5 +80,4 @@ Une fois l'installation terminée, lancez simplement l'application.
 Pour ajouter vos propres thèmes, c'est très simple :
 1.  Créez un nouveau fichier `.css` (ex: `mon_style.css`).
 2.  Placez-le dans le dossier `styles/`.
-
 3.  Relancez l'application : votre thème apparaîtra automatiquement dans le menu déroulant !
