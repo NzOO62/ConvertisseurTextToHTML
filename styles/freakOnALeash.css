@@ -1,0 +1,197 @@
+/* * Thème : "KORN: UNTOUCHABLES ASYLUM"
+ * Niveau : Extreme Grunge / Nu-Metal 
+ * Inspiration : Pochettes d'albums 'Issues' et 'Untouchables'
+ */
+
+/* * POLICES :
+ * 'Rubik Wet Paint' : Pour le logo liquide.
+ * 'Eater' : Une police qui semble "infectée" ou moisie pour les sous-titres.
+ * 'Nanum Pen Script' : Une écriture manuscrite très fine et instable (style psychopathe).
+ * 'Share Tech Mono' : Pour le côté industriel/hôpital psychiatrique.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&family=Eater&family=Nanum+Pen+Script&family=Share+Tech+Mono&display=swap');
+
+body {
+    background-color: #0a0a0a;
+    color: #b0b0b0;
+    font-family: 'Share Tech Mono', monospace;
+    margin: 0;
+    padding: 40px;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    /* FOND COMPLEXE : Simulation de murs sales */
+    background-image: 
+        /* Taches de lumière violette */
+        radial-gradient(circle at 20% 30%, rgba(76, 0, 130, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(139, 69, 19, 0.3) 0%, transparent 40%),
+        /* Rayures verticales sombres (Barreaux de prison flous) */
+        repeating-linear-gradient(90deg, transparent 0px, transparent 40px, rgba(0,0,0,0.5) 40px, rgba(0,0,0,0.5) 42px);
+}
+
+/* --- CONTENEUR PRINCIPAL (La pièce capitonnée) --- */
+/* Si ton HTML n'a pas de div wrapper, ceci s'applique aux blocs principaux */
+div, p, table {
+    position: relative;
+    z-index: 1;
+}
+
+/* --- LE LOGO (H1) - L'Élément Central --- */
+h1 {
+    font-family: 'Rubik Wet Paint', cursive;
+    font-size: 5em;
+    text-align: center;
+    color: #e0e0e0;
+    line-height: 0.8;
+    margin-bottom: 60px;
+    margin-top: 40px;
+    
+    /* EFFET CHROME SALE + LUEUR VIOLETTE */
+    text-shadow: 
+        -3px -3px 0 #444, /* Reflet haut */
+        3px 3px 0 #000,   /* Ombre bas */
+        0 0 15px #6a0dad, /* Glow violet */
+        0 0 30px #6a0dad; /* Glow violet large */
+
+    /* Transformation géométrique pour le style Korn */
+    transform: scaleY(1.2) rotate(-3deg); 
+    
+    /* Une ligne "coupée" au milieu du titre */
+    text-decoration: line-through;
+    text-decoration-color: rgba(0,0,0,0.5);
+    text-decoration-thickness: 5px;
+}
+
+/* --- SOUS-TITRES (H2) - Style "Poupée vaudou" --- */
+h2 {
+    font-family: 'Eater', cursive;
+    font-size: 2.2em;
+    color: #cd853f; /* Pérou (Brun/Orange sale) */
+    background-color: #1a1110;
+    
+    /* Bordure "cousue" */
+    border: 2px dashed #8b4513;
+    border-radius: 10px;
+    
+    padding: 15px 30px;
+    margin-top: 50px;
+    display: inline-block; /* Le fond s'adapte au texte */
+    
+    /* Rotation aléatoire pour chaque titre (simulation) */
+    transform: rotate(1deg);
+    box-shadow: 5px 5px 0px #000;
+}
+
+/* --- PARAGRAPHES --- */
+p {
+    font-size: 1.15em;
+    line-height: 1.8;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent pour lisibilité */
+    padding: 15px;
+    border-left: 3px solid #555; /* Barre discrète à gauche */
+    box-shadow: 0 0 20px rgba(0,0,0,1);
+}
+
+/* --- LIENS (Style "Cicatrices") --- */
+a {
+    color: #ba55d3; /* Orchidée moyen */
+    text-decoration: none;
+    border-bottom: 3px solid #4b0082; /* Ligne épaisse indigo */
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.2s;
+}
+
+a:hover {
+    background-color: #ba55d3;
+    color: #000;
+    border-bottom: 3px solid #fff;
+    box-shadow: 0 0 10px #ba55d3;
+    cursor: help; /* Le curseur change en point d'interrogation */
+}
+
+/* --- CITATIONS (Le "Journal Intime") --- */
+blockquote {
+    font-family: 'Nanum Pen Script', cursive; /* Écriture manuscrite fine */
+    font-size: 2em; /* Très grand pour être lisible */
+    color: #dcdcdc;
+    text-align: center;
+    
+    /* Création d'un effet "Papier sale collé" */
+    background-color: #222;
+    background-image: linear-gradient(45deg, #222 25%, #1a1a1a 25%, #1a1a1a 50%, #222 50%, #222 75%, #1a1a1a 75%, #1a1a1a 100%);
+    background-size: 20px 20px;
+    
+    padding: 40px;
+    margin: 50px 20px;
+    border: 1px solid #555;
+    
+    /* Rotation inverse pour déranger */
+    transform: rotate(-2deg);
+    
+    /* L'effet "Scotch" en haut (Trick CSS) */
+    border-top: 10px solid rgba(255,255,255,0.1);
+}
+
+/* --- TABLEAUX (La Cage Rouillée) --- */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px 10px; /* Espacement énorme entre les cellules */
+    margin: 50px 0;
+}
+
+th {
+    font-family: 'Rubik Wet Paint', cursive;
+    font-size: 1.5em;
+    color: #000;
+    background: linear-gradient(180deg, #b87333 0%, #8b4513 100%); /* Dégradé Cuivre */
+    padding: 15px;
+    border: 1px solid #000;
+    transform: rotate(-1deg); /* En-têtes tordus */
+}
+
+td {
+    background-color: #111;
+    border: 1px solid #333;
+    padding: 15px;
+    font-family: 'Share Tech Mono', monospace;
+    color: #888;
+    
+    /* Petite ombre intérieure pour effet "enfoncé" */
+    box-shadow: inset 0 0 10px #000;
+}
+
+/* --- EFFET CLIGNOTEMENT (GLITCH) SUR LE TEXTE --- */
+/* On ne peut pas faire de vraie animation keyframe complexe en Tkinter parfois,
+   mais on peut utiliser des hovers agressifs */
+h1:hover {
+    color: #ba55d3;
+    text-shadow: 5px 0px 0px #ff0000, -5px 0px 0px #0000ff;
+}
+
+/* --- LISTES (Puces personnalisées) --- */
+ul li {
+    list-style-type: none;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+ul li::before {
+    content: "X"; /* Les puces sont des X */
+    color: #8b0000; /* Rouge sang */
+    font-family: 'Eater', cursive;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* --- CODE --- */
+pre {
+    background: #050505;
+    border: 1px dotted #6a0dad;
+    padding: 20px;
+    color: #00ff00; /* Vert Matrix/Alien */
+    font-size: 0.9em;
+}
