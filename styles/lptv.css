@@ -1,0 +1,186 @@
+/* * Thème : "PROJECT: HYBRID" (Linkin Park)
+ * Vibe : Street Art, Glitch, Hybrid Theory, Blueprint, Beton.
+ */
+
+/* * POLICES :
+ * 'Black Ops One' : Style pochoir militaire (Le logo classique).
+ * 'Rajdhani' : Une police technique/carrée (Côté sci-fi/electro).
+ * 'Permanent Marker' : Le style "tag" de Mike Shinoda.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Rajdhani:wght@500;700&family=Permanent+Marker&display=swap');
+
+body {
+    background-color: #121212; /* Noir carbone */
+    color: #dcdcdc;
+    font-family: 'Rajdhani', sans-serif; /* Police carrée moderne */
+    font-size: 18px;
+    margin: 0;
+    padding: 40px;
+    
+    /* FOND TEXTURÉ : Effet "Scanlines" + "Mur sale" */
+    background-image: 
+        /* Lignes horizontales fines (effet écran/TV) */
+        repeating-linear-gradient(0deg, transparent 0px, transparent 2px, #000 3px),
+        /* Un dégradé gris pour donner du volume */
+        radial-gradient(circle at center, #2a2a2a 0%, #000000 100%);
+}
+
+/* --- LE TITRE PRINCIPAL (H1) : STYLE LOGO [LP] --- */
+h1 {
+    font-family: 'Black Ops One', cursive; /* Stencil */
+    font-size: 4em;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 60px;
+    position: relative;
+    
+    /* Effet de peinture spray rouge derrière */
+    text-shadow: 4px 4px 0px #d63031; 
+}
+
+/* Ajout des CROCHETS emblématiques [ ] autour du titre */
+h1::before {
+    content: "[";
+    margin-right: 15px;
+    color: #d63031; /* Crochets rouges */
+}
+h1::after {
+    content: "]";
+    margin-left: 15px;
+    color: #d63031;
+}
+
+/* --- SOUS-TITRES (H2) : STYLE "METEORA" --- */
+h2 {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 2.5em;
+    color: #00d2d3; /* Cyan électrique (Côté Electro) */
+    text-transform: uppercase;
+    border-bottom: 2px solid #444;
+    margin-top: 50px;
+    padding-left: 20px;
+    
+    /* Un gros bloc rectangulaire à gauche */
+    border-left: 15px solid #d63031;
+    
+    /* Effet "Glitch" (texte décalé) simulé */
+    text-shadow: -2px 0 #fff;
+}
+
+/* --- TEXTE COURANT --- */
+p {
+    line-height: 1.6;
+    color: #b2bec3;
+    /* Alignement justifié comme un manifeste */
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* --- LIENS (Style "Breaking the Habit") --- */
+a {
+    color: #d63031; /* Rouge */
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 2px 8px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+a:hover {
+    background-color: #d63031;
+    color: #fff;
+    border: 1px solid #fff;
+    /* Lueur cyan autour du rouge (contraste chaud/froid) */
+    box-shadow: 0 0 15px #00d2d3; 
+}
+
+/* --- CITATIONS (L'Art de Mike Shinoda) --- */
+blockquote {
+    font-family: 'Permanent Marker', cursive; /* Écriture Graffiti */
+    font-size: 1.6em;
+    color: #dfe6e9;
+    text-align: center;
+    
+    /* Cadre style "Spray Paint" */
+    border: 3px solid #fff;
+    padding: 30px;
+    margin: 40px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    /* Rotation légère comme un sticker collé */
+    transform: rotate(-1deg);
+    
+    /* Ombre portée dure */
+    box-shadow: 10px 10px 0px rgba(0, 210, 211, 0.3); /* Ombre cyan */
+}
+
+/* --- TABLEAUX (Style "Blueprint" / Technique) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 40px 0;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border: 1px solid #555;
+}
+
+th {
+    background-color: #2d3436;
+    color: #00d2d3; /* Titres Cyan */
+    text-transform: uppercase;
+    padding: 15px;
+    border-bottom: 2px solid #d63031; /* Ligne rouge de séparation */
+    text-align: left;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #333;
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Survol futuriste */
+tr:hover td {
+    background-color: rgba(0, 210, 211, 0.1); /* Fond cyan très léger */
+    color: #fff;
+    border-left: 4px solid #d63031; /* Indicateur rouge à gauche */
+}
+
+/* --- CODE / PRE (Style Terminal Glitch) --- */
+pre {
+    background-color: #000;
+    border: 1px solid #333;
+    color: #00d2d3; /* Texte Cyan terminal */
+    padding: 20px;
+    font-family: monospace;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Une petite barre de décoration sur le bloc de code */
+pre::before {
+    content: "/// SYSTEM LOG ///";
+    display: block;
+    font-size: 0.8em;
+    color: #555;
+    border-bottom: 1px solid #333;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+/* --- LISTES --- */
+ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+ul li::before {
+    content: ">>"; /* Puce style terminal */
+    color: #d63031;
+    font-weight: bold;
+    margin-right: 10px;
+}
